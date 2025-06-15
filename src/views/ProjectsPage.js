@@ -8,7 +8,7 @@ const ProjectsPage = () => {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/projects')
+        axios.get('http://localhost:5000/projects')
             .then(response => setProjects(response.data))
             .catch(error => console.error('Error fetching projects:', error));
     }, []);
